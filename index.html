@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn&SignUp</title>
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./style/style.css"/>
+    <script src="https://kit.fontawesome.com/2655b3b7cf.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- sign in form -->
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="" class="sign-in-form" onsubmit ='handleSubmit(event)'>
+            <h2 class="title">Smart Login System</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input id="signInUser" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input id="signInPassword" type="password" placeholder="Password" />
+            </div>
+            <input onclick="loginFunction()" type="submit" value="Login" class="btn solid" />
+            <div id="invalidUserOrPassword">
+              <p class="text-danger"> <span><i class="fa-solid fa-circle-exclamation px-2"></i></span>Invalid User Name or Password!</p> 
+             </div>
+          </form>
+
+          <!--sign up form  -->
+          <form action="" class="sign-up-form" onsubmit="handleSubmit(event)">
+            <h2 class="title">Sign Up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input id="userName" type="text" placeholder="Username" />
+            </div>
+            <div id="emptyName">
+              <p class="text-danger"> <span><i class="fa-solid fa-circle-exclamation px-2"></i></span>Invalid User Name</p> 
+             </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input id="email" type="email" placeholder="Email" />
+            </div>
+            <div id="emptyEmail">
+              <p class="text-danger"> <span><i class="fa-solid fa-circle-exclamation px-2"></i></span>Invalid E-mail</p> 
+             </div>
+            <div id="password" class="input-field">
+              <i class="fas fa-lock"></i>
+              <input id="inputPassword" type="password" placeholder="Password" />
+            </div>
+            <div id="emptyPassword">
+              <p class="text-danger"> <span><i class="fa-solid fa-circle-exclamation px-2"></i></span>Invalid Password</p> 
+             </div>
+            <input onclick="mainFunction()" type="submit" value="Sign Up" class="btn solid" />
+            <!-- add alert empty-->
+          <div id="emptyId">
+            <div class="alert text-danger d-flex align-items-center" role="alert">
+              <p> <span><i class="fa-solid fa-circle-exclamation text-danger"></i></span> All inputs are empty</p>
+            </div>
+          </div>
+          <!-- add alert user exist-->
+          <div id="exist">
+            <div class="alert text-danger d-flex align-items-center" role="alert">
+              <p> <span><i class="fa-solid fa-circle-exclamation text-danger"></i></span> User Already Exist!</p>
+            </div>
+          </div>
+          <!--add alert success-->
+          <div id="success">
+          <div class="alert text-success d-flex align-items-center" role="alert">
+             <p> <span><i class="fa-solid fa-circle-check px-2"></i></span>Success</p> 
+          </div>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="panels-container">
+
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>Don't have an account?</h3>
+                <button class="btn transparent my-btn" id="sign-up-btn">Sign Up</button>
+            </div>
+            <img src="./img/8iig_ks33_201026-removebg-preview.png" class="image" alt="">
+        </div>
+
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>One of us?</h3>
+                <button class="btn transparent my-btn" id="sign-in-btn">Sign In</button>
+            </div>
+            <img src="./img/42919-ai-brush-removebg-bmz0w82j.png" class="image" alt="">
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
